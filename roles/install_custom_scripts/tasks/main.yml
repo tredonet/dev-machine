@@ -3,7 +3,5 @@
   copy:
     src: files/
     dest: /usr/local/sbin/
+    mode: "755"
     directory_mode:
-
-- name: Make executable
-  command: chmod +x /usr/local/sbin/*

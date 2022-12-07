@@ -1,11 +1,8 @@
-- name: Install packages
-  community.general.snap:
-    name:
-      - spotify
-    
+---
 - name: Install packages with --classic
   community.general.snap:
     name:
+      - spotify
       - code
       - slack
       - kubectl
