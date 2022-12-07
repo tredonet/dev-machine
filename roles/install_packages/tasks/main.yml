@@ -1,0 +1,18 @@
+---
+- name: Upgrade all packages
+  apt:
+    name: "*"
+    state: latest
+
+- name: Install prerequisite packages
+  apt:
+    name: "{{ packages }}"
+    state: present
+  vars:
+    packages:
+      - curl
+      - git
+      - python3-dev 
+      - python3-pip 
+      - python3-setuptools
+      - terminator

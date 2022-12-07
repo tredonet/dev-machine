@@ -1,0 +1,11 @@
+---
+- name: Copy Templates
+  copy:
+      src: files/Dockerfile
+      dest: /opt/ansible/Dockerfile
+      owner: root
+      group: root
+      mode: "0644"
+      
+- name: Build Ansible image
+  command: docker build -t toninos-ansible /opt/ansible/

@@ -1,0 +1,12 @@
+- hosts: localhost
+  gather_facts: no
+  become: yes
+  roles:
+    - install_packages
+    - install_ohmyzsh
+    - install_node
+    - install_docker
+    - install_custom_scripts
+    - install_thef
+    - install_snap_packages
+    - build_ansible_image

@@ -1,0 +1,9 @@
+---
+- name: Copy custom scripts to sbin
+  copy:
+    src: files/
+    dest: /usr/local/sbin/
+    directory_mode:
+
+- name: Make executable
+  command: chmod +x /usr/local/sbin/*

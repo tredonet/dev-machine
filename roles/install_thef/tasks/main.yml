@@ -1,0 +1,3 @@
+---
+- name: Install The Fuck
+  command: pip3 install thefuck --user

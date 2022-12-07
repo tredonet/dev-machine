@@ -1,0 +1,26 @@
+---
+- name: Update and install docker
+  apt:
+      name: "{{ packages }}"
+      update_cache: yes
+      state: present
+  vars:
+      packages:
+          - docker.io
+          - docker-compose
+
+- name: Start service docker, if not started
+  service:
+      name: docker
+      state: started
+      enabled: yes
+
+- name: Get the username running the deploy
+  become: false
+  command: whoami
+  register: system_user
+
+- name: Add user to docker group
+  user:
+      name: "{{system_user.stdout}}"
+      group: docker
