@@ -1,0 +1,7 @@
+---
+- name: Download Mongo Compass package
+  command: wget https://downloads.mongodb.com/compass/mongodb-compass_1.34.1_amd64.deb -O /tmp/mongo_compass.deb
+
+- name: Install Mongo Compass
+  apt:
+    deb: /tmp/mongo_compass.deb

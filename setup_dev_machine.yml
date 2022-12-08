@@ -9,4 +9,6 @@
     - install_custom_scripts
     - install_thef
     - install_snap_packages
+    - install_compass
+    - install_dive
     - build_ansible_image

@@ -6,4 +6,5 @@
       - code
       - slack
       - kubectl
+      - insomnia
     classic: true
