@@ -2,10 +2,12 @@
   become: true
   gather_facts: yes
   roles:
-    # - install_packages
-    # - install_ohmyzsh
-    # - install_node
-    # - install_docker
-    # - install_custom_scripts
-    # - install_snap_packages
+    - install_packages
+    - install_ohmyzsh
+    - install_node
+    - install_docker
+    - install_custom_scripts
+    - install_snap_packages
+    - install_compass
+    - install_dive
     - build_ansible_image
