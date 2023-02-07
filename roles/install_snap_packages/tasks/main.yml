@@ -5,5 +5,8 @@
       - spotify
       - code
       - slack
+      - chromium
+      - insomnia
+      - remmina
       - kubectl
     classic: true

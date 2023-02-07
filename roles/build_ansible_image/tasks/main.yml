@@ -1,4 +1,9 @@
 ---
+- name: Creates directory
+  file:
+    path: /opt/ansible
+    state: directory
+
 - name: Copy Templates
   copy:
       src: files/Dockerfile
@@ -8,4 +13,5 @@
       mode: "0644"
       
 - name: Build Ansible image
+  become: false
   command: docker build -t toninos-ansible /opt/ansible/

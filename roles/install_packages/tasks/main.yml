@@ -1,8 +1,22 @@
 ---
+
 - name: Upgrade all packages
   apt:
     name: "*"
     state: latest
+
+- name: Get the username running the deploy
+  become: false
+  command: whoami
+  register: system_user
+
+- name: Copy configuration files to home directory
+  become: false
+  copy:
+    src: files/
+    dest: /home/{{ system_user.stdout }}
+    mode: "644"
+    directory_mode:
 
 - name: Install prerequisite packages
   apt:
@@ -17,3 +31,9 @@
       - python3-setuptools
       - terminator
       - zsh
+      - thefuck
+
+- name: Set zsh as default shell
+  user:
+    name: "{{ ansible_user_id }}"
+    shell: /bin/zsh
