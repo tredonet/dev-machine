@@ -1,6 +1,6 @@
 ---
 - name: Download Node PPA
-  command: curl -sL https://deb.nodesource.com/setup_16.x -o /tmp/nodesource_setup.sh
+  command: curl -sL https://deb.nodesource.com/setup_18.x -o /tmp/nodesource_setup.sh
 
 - name: Make nodesource_setup executable
   command: chmod +x /tmp/nodesource_setup.sh

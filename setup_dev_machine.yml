@@ -10,4 +10,3 @@
     - install_snap_packages
     - install_compass
     - install_dive
-    - build_ansible_image

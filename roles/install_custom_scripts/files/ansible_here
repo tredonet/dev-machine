@@ -1,1 +1,0 @@
-docker run -it -v $(pwd):/workdir -v /home/tonino/.ssh:/root/.ssh:ro toninos-ansible
