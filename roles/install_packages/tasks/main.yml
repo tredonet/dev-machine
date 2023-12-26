@@ -4,6 +4,7 @@
   apt:
     name: "*"
     state: latest
+    update_cache: yes
 
 - name: Get the username running the deploy
   become: false
@@ -36,6 +37,8 @@
       - thefuck
 
 - name: Set zsh as default shell
+  become: true
   user:
-    name: "{{ ansible_user_id }}"
+    name: "{{ system_user.stdout }}"
     shell: /bin/zsh
+

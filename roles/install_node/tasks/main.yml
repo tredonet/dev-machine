@@ -1,17 +1,7 @@
 ---
-- name: Download Node PPA
-  command: curl -sL https://deb.nodesource.com/setup_18.x -o /tmp/nodesource_setup.sh
-
-- name: Make nodesource_setup executable
-  command: chmod +x /tmp/nodesource_setup.sh
-
-- name: Install Node PPA
-  command: /tmp/nodesource_setup.sh
-
-- name: Install Node16
-  apt:
-    name: "{{ packages }}"
-    state: present
-  vars:
-    packages:
-      - nodejs
+- name: Install node 
+  community.general.snap:
+    name:
+      - node
+    classic: true
+    channel: 20

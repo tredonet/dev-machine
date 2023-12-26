@@ -10,3 +10,4 @@
     - install_snap_packages
     - install_compass
     - install_dive
+    - install_vscode_extensions

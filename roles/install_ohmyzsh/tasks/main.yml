@@ -6,4 +6,5 @@
   command: chmod +x /tmp/ohmyzsh.sh
 
 - name: Install Oh My ZSH
+  become: false
   command: /tmp/ohmyzsh.sh --unattended

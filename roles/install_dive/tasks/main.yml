@@ -1,6 +1,6 @@
 ---
 - name: Download Dive
-  command: wget https://github.com/wagoodman/dive/releases/download/v0.9.2/dive_0.9.2_linux_amd64.deb -O /tmp/dive.deb
+  command: wget https://github.com/wagoodman/dive/releases/download/v0.11.0/dive_0.11.0_linux_amd64.deb -O /tmp/dive.deb
 
 - name: Install Dive
   apt:
